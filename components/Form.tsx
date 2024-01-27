@@ -11,8 +11,8 @@ type FormData = {
     citiesTravelled: {
         dateArrived: string;
         city: string;
-        xtracity?: string,
-        extracity?: string
+        xtraCity?: string,
+        extraCity?: string
     }[];
 };
 
@@ -26,7 +26,7 @@ const Form = () => {
     const { register, handleSubmit, formState: { errors, isSubmitSuccessful }, reset } = useForm<FormData>();
     const [formData, setFormData] = useState<FormData | null>(null);
     const [currentStep, setCurrentStep] = useState(0)
-    const [showInput, setShowInput] = useState(false)
+    const [showInput, setShowInput] = useState<boolean>(false)
 
     const onSubmit = async (data: FormData) => {
         try {
@@ -195,14 +195,14 @@ const Form = () => {
                                     id="xtraCity"
                                     className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Enter Additional City" 
-                                    // {...register(`citiesTravelled.${0}.xtraCity`)}                        
+                                    {...register(`citiesTravelled.${0}.xtraCity`)}                        
                                 />
                                 <input
                                     type="text"
                                     id="extraCity"
                                     className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Enter Additional City" 
-                                    // {...register(`citiesTravelled.${0}.extraCity`)}                        
+                                    {...register(`citiesTravelled.${0}.extraCity`)}                        
                                 />
                                 </div>
                             )}
