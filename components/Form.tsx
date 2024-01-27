@@ -11,6 +11,8 @@ type FormData = {
     citiesTravelled: {
         dateArrived: string;
         city: string;
+        xtracity?: string,
+        extracity?: string
     }[];
 };
 
@@ -23,6 +25,8 @@ const steps = [
 const Form = () => {
     const { register, handleSubmit, formState: { errors, isSubmitSuccessful }, reset } = useForm<FormData>();
     const [formData, setFormData] = useState<FormData | null>(null);
+    const [currentStep, setCurrentStep] = useState(0)
+    const [showInput, setShowInput] = useState(false)
 
     const onSubmit = async (data: FormData) => {
         try {
@@ -35,7 +39,9 @@ const Form = () => {
         }
     }
 
-    const [currentStep, setCurrentStep] = useState(0)
+    const handleAddInput = () => {
+        setShowInput(true)
+    }
 
     const next = () => {
         if (currentStep < steps.length - 1) {
@@ -175,16 +181,38 @@ const Form = () => {
                             />
                         </div>
                         <div className='mb-5'>
-                            <button className='text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'>
+                            <button
+                                type='button'
+                                onClick={handleAddInput} 
+                                className='text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'>
                                 Add more
                             </button>
+
+                            {showInput && (
+                                <div>
+                                <input
+                                    type="text"
+                                    id="xtraCity"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Enter Additional City" 
+                                    // {...register(`citiesTravelled.${0}.xtraCity`)}                        
+                                />
+                                <input
+                                    type="text"
+                                    id="extraCity"
+                                    className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Enter Additional City" 
+                                    // {...register(`citiesTravelled.${0}.extraCity`)}                        
+                                />
+                                </div>
+                            )}
                         </div>
 
                         <div className='flex justify-center'>
                         <button
                             type='button'
                             onClick={prev}
-                            disabled={currentStep === 1}
+                            disabled={!currentStep}
                             className='rounded bg-white px-2 py-1 text-sm font-semibold text-sky-900 shadow-sm ring-1 ring-inset ring-sky-300 hover:bg-sky-50 disabled:cursor-not-allowed disabled:opacity-50'
                         >
                             <svg
