@@ -103,11 +103,11 @@ const Form = () => {
                     <div className='mt-8'>
                         <h1 className='font-bold text-center mb-5 text-2xl'>Personal Information</h1>
                         <div className='mb-5'>
-                            <label htmlFor="firstName" className="block mb-2 text-md font-medium text-gray-900 dark:text-white">First name</label>
+                            <label htmlFor="firstName" className="block mb-2 text-md font-medium text-gray-900">First name</label>
                             <input
                                 type="text"
                                 id="firstName"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="Enter your first name"
                                 required
                                 {...register(`personalInfo.${0}.firstName`, { required: true })}  
@@ -115,11 +115,11 @@ const Form = () => {
                              {errors.personalInfo?.[0]?.firstName && ( <p>FirstName is Required</p> )}
                         </div>
                         <div className='mb-5'>
-                            <label htmlFor="lastName" className="block mb-2 text-md font-medium text-gray-900 dark:text-white">Last name</label>
+                            <label htmlFor="lastName" className="block mb-2 text-md font-medium text-gray-900">Last name</label>
                             <input
                                 type="text"
                                 id="lastName"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="Enter your last name"
                                 required
                                 {...register(`personalInfo.${0}.lastName`, { required: true })}
@@ -127,11 +127,11 @@ const Form = () => {
                             {errors.personalInfo?.[0]?.lastName && ( <p>LastName is Required</p> )}
                         </div>
                         <div className="mb-5">
-                            <label htmlFor="dob" className="block mb-2 text-md font-medium text-gray-900 dark:text-white">Date of Birth</label>
+                            <label htmlFor="dob" className="block mb-2 text-md font-medium text-gray-900">Date of Birth</label>
                             <input
                                 type="date"
                                 id="dob"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required
                                 {...register(`personalInfo.${0}.dob`, { required: true })}
                             />
@@ -143,7 +143,7 @@ const Form = () => {
                                 </div>
                                 <input
                                     type="date"
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Select date"
                                     {...register(`personalInfo.${0}.dob`, { required: true })}
                                 />
@@ -174,7 +174,7 @@ const Form = () => {
                     <div className='mt-8'>
                         <h1 className='font-bold text-center mb-5 text-2xl'>Cities Travelled</h1>
                         <div className="mb-5">
-                            <label htmlFor="dateArrived" className="block mb-2 text-md font-medium text-gray-900 dark:text-white">Date Arrived</label>
+                            <label htmlFor="dateArrived" className="block mb-2 text-md font-medium text-gray-900 ">Date Arrived</label>
                             <div className="relative max-w-sm">
                                 <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                                     <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -183,7 +183,7 @@ const Form = () => {
                                 </div>
                                 <input
                                     type="date"
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     // {...register('dateArrived')}
                                     {...register(`citiesTravelled.${0}.dateArrived`)}
                                     required
@@ -191,11 +191,11 @@ const Form = () => {
                             </div>
                         </div>
                         <div className='mb-5'>
-                            <label htmlFor="city" className="block mb-2 text-md font-medium text-gray-900 dark:text-white">City Name</label>
+                            <label htmlFor="city" className="block mb-2 text-md font-medium text-gray-900">City Name</label>
                             <input
                                 type="text"
                                 id="city"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="Enter city name"
                                 required
                                 // {...register('city')}
@@ -215,14 +215,14 @@ const Form = () => {
                                 <input
                                     type="text"
                                     id="xtraCity"
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Enter Additional City" 
                                     {...register(`citiesTravelled.${0}.xtraCity`)}                        
                                 />
                                 <input
                                     type="text"
                                     id="extraCity"
-                                    className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Enter Additional City" 
                                     {...register(`citiesTravelled.${0}.extraCity`)}                        
                                 />
