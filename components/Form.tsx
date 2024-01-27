@@ -184,7 +184,7 @@ const Form = () => {
                         <button
                             type='button'
                             onClick={prev}
-                            disabled={currentStep === 0}
+                            disabled={currentStep === 1}
                             className='rounded bg-white px-2 py-1 text-sm font-semibold text-sky-900 shadow-sm ring-1 ring-inset ring-sky-300 hover:bg-sky-50 disabled:cursor-not-allowed disabled:opacity-50'
                         >
                             <svg
