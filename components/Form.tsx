@@ -12,7 +12,9 @@ type FormData = {
         dateArrived: string;
         city: string;
         xtraCity?: string,
-        extraCity?: string
+        xtraDate?: string,
+        extraCity?: string,
+        extraDate?: string
     }[];
 };
 
@@ -211,20 +213,38 @@ const Form = () => {
 
                             {showInput && (
                                 <div>
-                                <input
-                                    type="text"
-                                    id="xtraCity"
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                    placeholder="Enter Additional City" 
-                                    {...register(`citiesTravelled.${0}.xtraCity`)}                        
-                                />
-                                <input
-                                    type="text"
-                                    id="extraCity"
-                                    className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                    placeholder="Enter Additional City" 
-                                    {...register(`citiesTravelled.${0}.extraCity`)}                        
-                                />
+                                    <div className='flex'>
+                                        <input
+                                            type="text"
+                                            id="xtraCity"
+                                            className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                            placeholder="Enter Additional City" 
+                                            {...register(`citiesTravelled.${0}.xtraCity`)}                        
+                                        />
+                                         <input
+                                            type="date"
+                                            id="xtraDate"
+                                            className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                            placeholder="Enter Additional City" 
+                                            {...register(`citiesTravelled.${0}.xtraDate`)}                        
+                                        />
+                                    </div>
+                                    <div className='flex'>
+                                        <input
+                                            type="text"
+                                            id="extraCity"
+                                            className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                            placeholder="Enter Additional City" 
+                                            {...register(`citiesTravelled.${0}.extraCity`)}                        
+                                        />
+                                            <input
+                                            type="date"
+                                            id="extraDate"
+                                            className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                            placeholder="Enter Additional City" 
+                                            {...register(`citiesTravelled.${0}.extraDate`)}                        
+                                        />
+                                </div>
                                 </div>
                             )}
                         </div>
