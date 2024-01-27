@@ -107,7 +107,7 @@ const Form = () => {
                             <input
                                 type="text"
                                 id="firstName"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                className="bg-gray-50 border border-gray-300 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="Enter your first name"
                                 required
                                 {...register(`personalInfo.${0}.firstName`, { required: true })}  
@@ -119,7 +119,7 @@ const Form = () => {
                             <input
                                 type="text"
                                 id="lastName"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                className="bg-gray-50 border border-gray-300 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="Enter your last name"
                                 required
                                 {...register(`personalInfo.${0}.lastName`, { required: true })}
@@ -127,11 +127,11 @@ const Form = () => {
                             {errors.personalInfo?.[0]?.lastName && ( <p>LastName is Required</p> )}
                         </div>
                         <div className="mb-5">
-                            <label htmlFor="dob" className="block mb-2 text-md font-medium text-gray-900">Date of Birth</label>
+                            <label htmlFor="dob" className="block mb-2 text-md font-medium">Date of Birth</label>
                             <input
                                 type="date"
                                 id="dob"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                className="bg-gray-50 border border-gray-300 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required
                                 {...register(`personalInfo.${0}.dob`, { required: true })}
                             />
@@ -143,7 +143,7 @@ const Form = () => {
                                 </div>
                                 <input
                                     type="date"
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    className="bg-gray-50 border border-gray-300 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Select date"
                                     {...register(`personalInfo.${0}.dob`, { required: true })}
                                 />
