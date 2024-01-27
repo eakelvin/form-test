@@ -128,7 +128,14 @@ const Form = () => {
                         </div>
                         <div className="mb-5">
                             <label htmlFor="dob" className="block mb-2 text-md font-medium text-gray-900 dark:text-white">Date of Birth</label>
-                            <div className="relative max-w-xl">
+                            <input
+                                type="date"
+                                id="dob"
+                                className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                required
+                                {...register(`personalInfo.${0}.dob`, { required: true })}
+                            />
+                            {/* <div className="relative max-lg-">
                                 <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                                     <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
@@ -141,7 +148,7 @@ const Form = () => {
                                     {...register(`personalInfo.${0}.dob`, { required: true })}
                                 />
                                 {errors.personalInfo?.[0]?.dob && ( <p>Date of Birth is Required</p> )}
-                            </div>
+                            </div> */}
                         </div>
                         {errorMessage && (
                             <div className="text-red-500 mt-2">
@@ -168,20 +175,20 @@ const Form = () => {
                         <h1 className='font-bold text-center mb-5 text-2xl'>Cities Travelled</h1>
                         <div className="mb-5">
                             <label htmlFor="dateArrived" className="block mb-2 text-md font-medium text-gray-900 dark:text-white">Date Arrived</label>
-                            {/* <div className="relative max-w-sm"> */}
-                                {/* <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                            <div className="relative max-w-sm">
+                                <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                                     <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                     </svg>
-                                </div> */}
+                                </div>
                                 <input
                                     type="date"
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     // {...register('dateArrived')}
                                     {...register(`citiesTravelled.${0}.dateArrived`)}
                                     required
                                 />
-                            {/* </div> */}
+                            </div>
                         </div>
                         <div className='mb-5'>
                             <label htmlFor="city" className="block mb-2 text-md font-medium text-gray-900 dark:text-white">City Name</label>
