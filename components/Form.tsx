@@ -98,7 +98,7 @@ const Form = () => {
                 </ol>
             </nav>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="max-w-sm mx-auto">
+            <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto">
                 {currentStep === 0 && (
                     <div className='mt-8'>
                         <h1 className='font-bold text-center mb-5 text-2xl'>Personal Information</h1>
