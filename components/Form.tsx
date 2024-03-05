@@ -133,7 +133,7 @@ const Form = () => {
                             <input
                                 type="date"
                                 id="dob"
-                                className="!inline-flex bg-gray-50 border border-gray-300 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+                                className="!w-full !inline-flex bg-gray-50 border border-gray-300 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
                                 required
                                 {...register(`personalInfo.${0}.dob`, { required: true })}
                             />
