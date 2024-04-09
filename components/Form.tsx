@@ -65,7 +65,7 @@ const Form = () => {
 
 
     return (
-        <div className=''>
+        <div className='w-full'>
             <nav aria-label='Progress'>
                 <ol role='list' className='space-y-4 md:flex md:space-x-8 md:space-y-0'>
                     {steps.map((step, index) => (
@@ -100,9 +100,9 @@ const Form = () => {
                 </ol>
             </nav>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto">
+            <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto w-full">
                 {currentStep === 0 && (
-                    <div className='mt-8'>
+                    <div className='mt-8 w-full'>
                         <h1 className='font-bold text-center mb-5 text-2xl'>Personal Information</h1>
                         <div className='mb-5'>
                             <label htmlFor="firstName" className="block mb-2 text-md font-medium text-gray-900">First name</label>
@@ -128,7 +128,7 @@ const Form = () => {
                             />
                             {errors.personalInfo?.[0]?.lastName && ( <p>LastName is Required</p> )}
                         </div>
-                        <div className="mb-5">
+                        <div className="mb-5 !w-full">
                             <label htmlFor="dob" className="block mb-2 text-md font-medium">Date of Birth</label>
                             <input
                                 type="date"
