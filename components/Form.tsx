@@ -31,7 +31,6 @@ const Form = () => {
     const [showInput, setShowInput] = useState<boolean>(false)
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-
     const onSubmit = async (data: FormData) => {
         try {
             console.log('Form data submitted:', data);
@@ -100,9 +99,9 @@ const Form = () => {
                 </ol>
             </nav>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto w-full">
+            <form onSubmit={handleSubmit(onSubmit)} className="mx-auto w-full">
                 {currentStep === 0 && (
-                    <div className='mt-8 w-full'>
+                    <div className='mt-8 !w-full'>
                         <h1 className='font-bold text-center mb-5 text-2xl'>Personal Information</h1>
                         <div className='mb-5'>
                             <label htmlFor="firstName" className="block mb-2 text-md font-medium text-gray-900">First name</label>
@@ -117,11 +116,11 @@ const Form = () => {
                              {errors.personalInfo?.[0]?.firstName && ( <p>FirstName is Required</p> )}
                         </div>
                         <div className='mb-5'>
-                            <label htmlFor="lastName" className="block mb-2 text-md font-medium text-gray-900">Last name</label>
+                            <label htmlFor="lastName" className="block mb-2 text-base font-medium text-gray-900">Last name</label>
                             <input
                                 type="text"
                                 id="lastName"
-                                className="bg-gray-50 border border-gray-300 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                className="bg-gray-50 border border-gray-300 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 placeholder="Enter your last name"
                                 required
                                 {...register(`personalInfo.${0}.lastName`, { required: true })}
@@ -129,14 +128,16 @@ const Form = () => {
                             {errors.personalInfo?.[0]?.lastName && ( <p>LastName is Required</p> )}
                         </div>
                         <div className="mb-5 !w-full">
-                            <label htmlFor="dob" className="block mb-2 text-md font-medium">Date of Birth</label>
+                            <label htmlFor="dob" className="block mb-2 text-base font-medium">Date of Birth///</label>
+                            <span className='!w-full'>
                             <input
                                 type="date"
                                 id="dob"
-                                className="!w-full !inline-flex bg-gray-50 border border-gray-300 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
+                                className="!w-full bg-gray-50 border border-gray-300 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
                                 required
                                 {...register(`personalInfo.${0}.dob`, { required: true })}
                             />
+                            </span>
                         </div>
                         {errorMessage && (
                             <div className="text-red-500 mt-2">
